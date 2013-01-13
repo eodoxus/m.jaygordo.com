@@ -1,0 +1,1 @@
+<?php echo ImageCache::thumb($photo->file->filepath, '500', $constrain='width') ?>

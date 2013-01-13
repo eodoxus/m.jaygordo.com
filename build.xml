@@ -1,0 +1,52 @@
+<project name="jujubase" default="help">
+	<target name="help">
+		<echo message="Targets"/>
+		<echo message="======="/>
+		<echo message="build               wipe the database and run the tests"/>
+		<echo message="ci                  clean, prepare, wipe-database and run the tests"/>
+	</target>
+
+	<target name="wipe-database">
+
+		<input message="All data is going to be deleted from DB continue (y/n)?" validargs="y,n" addproperty="do.delete" />
+		<condition property="do.abort">
+	    	<equals arg1="n" arg2="${do.delete}"/>
+		</condition>
+		<fail if="do.abort">Build aborted by user.</fail>
+		<exec dir="${basedir}" executable="php" failonerror="true">
+			<arg line="modules/migrate/run.php 0"/>
+		</exec>
+		<exec dir="${basedir}" executable="php" failonerror="true">
+			<arg line="modules/migrate/run.php"/>
+		</exec>
+	</target>
+
+	<target name="all-tests">
+		<exec dir="${basedir}" executable="phpunit" failonerror="true">
+			<arg line="--bootstrap index.php --verbose --group jb modules/unittest/tests.php"/>
+		</exec>
+	</target>
+	
+	<target name="clean">
+		<delete dir="${basedir}/build/logs"/>
+		<delete dir="${basedir}/build/docs"/>
+	</target>
+
+	<target name="prepare" depends="clean">
+		<mkdir dir="${basedir}/build/logs"/>
+		<mkdir dir="${basedir}/build/docs"/>
+	</target>
+	
+	<target name="configure-web">
+		<copy file="htaccess.txt" tofile=".htaccess"/>
+		<chmod perm="ugo+wrX" dir="${basedir}" includes="**/**"/>
+	</target>
+	
+
+	<target name="build" depends="wipe-database, all-tests" />
+	
+	<target name="ci" depends="clean, prepare, configure-web, wipe-database, all-tests" />
+
+
+</project>
+

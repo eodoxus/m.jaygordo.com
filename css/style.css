@@ -1,0 +1,9 @@
+.ui-bar-b {
+	background: -moz-linear-gradient(center top , #3F5468, #19324A) repeat scroll 0 0 #19324A;
+	border-bottom:2px solid #000;
+}
+
+#footer {
+	border-top:2px solid #000;
+	padding:10px;
+}

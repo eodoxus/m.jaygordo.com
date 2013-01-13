@@ -1,0 +1,4 @@
+role,username,email,password,firstName,lastName,gender,birthDate,addressLine1,addressLine2,addressLine3,city,stateCode,regionCode,countryCode,postalCode,phone,timeZone,preferredLanguage,lastLogin,dateModified,dateCreated
+anonymous,,,,,,,,,,,,,,,,,,,0000-00-00 00:00:00,0000-00-00 00:00:00,0000-00-00 00:00:00
+super-admin,eodoxus,jgordon@2advanced.com,D00112F56C353B6D,Jason,Gordon,M,1979-01-17 00:00:00,215 Avenida Adobe,,,San Clemente,CA,Orange County,US,92672,,America/Los_Ang,en_US,0000-00-00 00:00:00,0000-00-00 00:00:00,0000-00-00 00:00:00
+authenticated,testy,testcase@phpunit.test,FA7A6176F69DCD3D,testy,mctestersauce,M,1979-01-17 00:00:00,1234 Sesame St,Apt B,Under the Couch,Aliso Viejo,CA,Orange County,US,92656,1234567890,America/Los_Ang,en_US,0000-00-00 00:00:00,0000-00-00 00:00:00,0000-00-00 00:00:00

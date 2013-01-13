@@ -1,0 +1,8 @@
+type,key,value,description,dateCreated,dateModified
+country_code,US,United States of America,'',0000-00-00 00:00:00,0000-00-00 00:00:00
+gender_code,M,Male,'',0000-00-00 00:00:00,0000-00-00 00:00:00
+gender_code,F,Female,'',0000-00-00 00:00:00,0000-00-00 00:00:00
+language_code,en_US,English,'',0000-00-00 00:00:00,0000-00-00 00:00:00
+role,admin,Administrator,'',0000-00-00 00:00:00,0000-00-00 00:00:00
+role,super-admin,Super Administrator,'',0000-00-00 00:00:00,0000-00-00 00:00:00
+state_code,CA,California,'',0000-00-00 00:00:00,0000-00-00 00:00:00

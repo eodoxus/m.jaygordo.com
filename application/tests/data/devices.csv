@@ -1,0 +1,3 @@
+id,deviceId,platform,softwareVersion,dateModified,dateCreated
+1, test_device_1, iOS, 4.1, 0000-00-00 00:00:00,0000-00-00 00:00:00
+2, test_device_2, Android, 4.1, 0000-00-00 00:00:00,0000-00-00 00:00:00
